@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+
+<!-- ===== ANINDA YONLENDIRME (sayfa cizilmeden calisir) ===== -->
+<script>
+  (function(){
+    var ua = navigator.userAgent || navigator.vendor || "";
+    if (/android/i.test(ua)) {
+      location.replace("https://play.google.com/store/apps/details?id=com.turgayyazici.blockjellyglow");
+    } else if (/iPhone|iPad|iPod/i.test(ua)) {
+      location.replace("https://apps.apple.com/app/id6781300844");
+    }
+    // Masaustu -> yonlendirme yok, asagidaki landing gorunur.
+  })();
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Block Jelly Glow</title>
+
+<!-- ===== SOSYAL MEDYA ONIZLEME (Open Graph) ===== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Block Jelly Glow">
+<meta property="og:description" content="Rengarenk jelly bloklar, tatmin edici patlamalar! Hemen indir, oyna. 🧩✨">
+<meta property="og:url" content="https://turgay5353.github.io/oyun/">
+<meta property="og:image" content="https://turgay5353.github.io/oyun/kapak.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Block Jelly Glow">
+<meta name="twitter:description" content="Rengarenk jelly bloklar, tatmin edici patlamalar! Hemen indir, oyna. 🧩✨">
+<meta name="twitter:image" content="https://turgay5353.github.io/oyun/kapak.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{--bg:#0b1030;--magenta:#ff4fd8;--cyan:#3fe0ff;--lime:#8bff5a;--gold:#ffd45a;--text:#eef1ff;--muted:#a8b0e0;}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{height:100%}
+  body{
+    font-family:'Baloo 2',system-ui,-apple-system,sans-serif;
+    background:radial-gradient(1200px 800px at 50% -10%, #1b2260 0%, var(--bg) 60%);
+    color:var(--text); min-height:100%;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center; padding:32px 20px; overflow-x:hidden;
+  }
+  .wrap{max-width:520px; width:100%}
+  .blocks{display:flex; gap:14px; justify-content:center; margin-bottom:26px}
+  .blk{width:56px; height:56px; border-radius:16px; position:relative; animation:bob 2.6s ease-in-out infinite}
+  .blk::after{content:""; position:absolute; inset:0; border-radius:16px;
+    background:radial-gradient(circle at 30% 25%, rgba(255,255,255,.7), transparent 45%);}
+  .b1{background:var(--magenta); box-shadow:0 0 26px var(--magenta), inset 0 4px 10px rgba(255,255,255,.4)}
+  .b2{background:var(--cyan);    box-shadow:0 0 26px var(--cyan),    inset 0 4px 10px rgba(255,255,255,.4); animation-delay:.25s}
+  .b3{background:var(--lime);    box-shadow:0 0 26px var(--lime),    inset 0 4px 10px rgba(255,255,255,.4); animation-delay:.5s}
+  .b4{background:var(--gold);    box-shadow:0 0 26px var(--gold),    inset 0 4px 10px rgba(255,255,255,.4); animation-delay:.75s}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  h1{
+    font-weight:800; font-size:clamp(34px,9vw,54px); line-height:1.05;
+    background:linear-gradient(90deg,var(--magenta),var(--cyan),var(--lime),var(--gold));
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    text-shadow:0 0 40px rgba(80,120,255,.35); margin-bottom:10px;
+  }
+  p.tag{color:var(--muted); font-size:clamp(15px,4.4vw,18px); margin-bottom:32px; font-weight:600}
+  .btns{display:flex; flex-direction:column; gap:14px; align-items:center}
+  a.store{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    width:100%; max-width:320px; padding:16px 22px; border-radius:16px;
+    font-weight:800; font-size:17px; text-decoration:none; color:#0b1030;
+    background:linear-gradient(180deg,#ffffff,#e8ecff);
+    box-shadow:0 10px 26px rgba(0,0,0,.35);
+  }
+  a.android{background:linear-gradient(180deg,#8bff5a,#38d94a); color:#0a2400}
+  .note{margin-top:26px; color:var(--muted); font-size:13px; opacity:.8}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="blocks">
+      <div class="blk b1"></div><div class="blk b2"></div>
+      <div class="blk b3"></div><div class="blk b4"></div>
+    </div>
+    <h1>Block Jelly Glow</h1>
+    <p class="tag">Rengarenk jelly bloklar, tatmin edici patlamalar. Hemen indir, oyna! 🧩✨</p>
+    <div class="btns">
+      <a class="store ios" href="https://apps.apple.com/app/id6781300844"> App Store'dan İndir</a>
+      <a class="store android" href="https://play.google.com/store/apps/details?id=com.turgayyazici.blockjellyglow">▶ Google Play'den İndir</a>
+    </div>
+    <div class="note">Telefonundan aç → otomatik mağazaya gidersin 👇</div>
+  </div>
+</body>
+</html>
